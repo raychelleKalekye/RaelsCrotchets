@@ -37,6 +37,7 @@
             .product p{
                 text-align: center;
                 font-size: 24px;
+                text-transform:uppercase;
                
             }
             .heading{
@@ -53,13 +54,7 @@
                transform: translateY(-15px);
 
             }
-            product .fa-plus {
-                position: absolute; 
-                top: calc(50% - 20px);
-                left: calc(50% - 20px); 
-                opacity: 0; 
-                transition: opacity 0.3s ease; 
-            }
+         
 
            .product p{
             border-bottom: 20px;
@@ -107,7 +102,7 @@
                     echo '<img src="data:image;base64,' . base64_encode($row['productImage']) . '" alt="Image"></a><br>';
                     echo '<p class="pro_name">' . $row['productName'] . '</p>';
                     echo '<p class="pro-price">' . $row['Price'] . '</p>';    
-                    echo '<button class="btn">ADD TO CART</button>' ; 
+                    echo '<button href= "/rae_website/products/shopping_cart.php" class="btn">ADD TO CART</button>' ; 
                     echo '</div>';
                 }
             }
