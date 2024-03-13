@@ -80,7 +80,7 @@
             <div class="div1">
                 <h6>MORE ABOUT US</h6>
                 <ul>
-                    <li><a href="/rae_website/front_page/home.php">Home</a></li>
+                    <li><a href="/rae_website/front_page/index.php">Home</a></li>
                     <li><a href="">About us</a></li>
                     <li><a href="">Contact Us</a></li>
                     <li><a href="">Blog</a></li>
