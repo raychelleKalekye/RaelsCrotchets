@@ -55,7 +55,8 @@
       
         <section class="mid_section ">
 
-        <button> SHOP NOW</button>
+        <a href="/rae_website/products/Allproducts.php"><button>SHOP NOW</button></a>
+
 
         </section>
    

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INCASE WE DELETE SQL AGAIN</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <p>
+            CREATE DATABASE website_data;
+CREATE TABLE products(productId varchar(255) PRIMARY KEY,productName longtext, Category varchar(255),Price varchar(255), productImage BLOB);
+CREATE TABLE users(fname varchar(255),sname varchar(255), us_name varchar(255), phoneNo int(11),Email varchar(255) PRIMARY KEY,Password longtext);
+CREATE TABLE addresses(SSN int PRIMARY KEY AUTO_INCREMENT,phoneNo int(11),Country varchar(255),StateOrCounty varchar(255),TownOrCity varchar(255),StreetAddress varchar(590),PostcodeOrZip varchar(255));
+ALTER TABLE addresses ADD FOREIGN KEY(phoneNo)REFERENCES users(phoneNo);
+
+        </p>
+    </body>
+</html>

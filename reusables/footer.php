@@ -8,7 +8,7 @@
                 flex:1;
                 background-color: #f2d3b1 ;
                 height:40vh;
-                margin-top: 100%;
+                margin-top: 6%;
                 
             }
             

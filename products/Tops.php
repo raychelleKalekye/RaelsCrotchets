@@ -91,7 +91,7 @@
                 die('Connection failed: ' . $conn->connect_error);
             } 
 
-            $query = "SELECT productId, productName, Price, productImage FROM products WHERE Category='Bottom-Wear'";
+            $query = "SELECT productId, productName, Price, productImage FROM products WHERE Category='Tops'";
             $query_run = mysqli_query($conn, $query);
 
             if ($query_run) {

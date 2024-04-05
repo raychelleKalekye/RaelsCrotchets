@@ -76,7 +76,7 @@
             .navLinks ul li{
                 list-style:none;
                 display:inline-block;
-                padding-left:3px;
+                padding-left:10px;
                 padding-right:4px;
                 font-size:24px;
                 padding-top:3%;
@@ -170,9 +170,10 @@
               <a href=""><img src="/rae_website/images/yarn-needle.png"></a><h1>RAE'S PATTERNS</h1>
                   
                   <ul class="list1">
-                      <li><a href=""><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+                      <li><a href="/rae_website/users/login.php"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
                       <li><a href=""><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
                       <li><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                      <li><a href="/rae_website/front_files/index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                       
                       
                   </ul>
@@ -181,14 +182,13 @@
           <nav class="navLinks" id="navLinks">
               
               <a><i class="fa fa-window-close" aria-hidden="true" onclick="hideMenu()"></i></a>
-              <ul class="list2">
-                  <li><a href="">Sweaters</a></li>
-                  <li><a href="">Tops</a></li>
+              <ul class="list2"> 
+                  <li><a href="/rae_website/products/Allproducts.php">All Products</a></li>
+                  <li><a href="/rae_website/products/dresses.php">Dresses</a></li>
+                  <li><a href="/rae_website/products/Tops.php">Tops</a></li>
                   <li><a href="/rae_website/products/bottomwear.php">Bottom-Wear</a></li>
-                  <li><a href="">Head-Wear</a></li>
-                  <li><a href="">Socks</a></li>
-                  <li><a href="">Bags</a></li>
-                  <li><a href="">Patterns</a></li>
+                  <li><a href="/rae_website/products/bags.php">Bags</a></li>
+                  
               </ul>
               
           </nav>

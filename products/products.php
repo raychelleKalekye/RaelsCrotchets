@@ -9,7 +9,7 @@ if ($conn->connect_error) {
     die('Connection failed: ' . $conn->connect_error);
 }
 
-echo 'Connected successfully'.'<br>';
+
 
 try{
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -17,7 +17,7 @@ try{
             echo 'Product Id id missing';
         }
         else {
-            var_dump($_FILES['productImage']);
+           
 
            
             if ($_FILES['productImage']['error'] !== UPLOAD_ERR_OK) {
