@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= catalogData[0].productName %</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Instrument+Serif:ital@0;1&family=Playfair+Display&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+
+            <style>
+                * {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Crimson Text', serif;
+                }
+                .product_info{
+                    display:flex;
+                }
+                .product{
+                    padding-left:110px;
+                    padding-top:160px;
+                    
+                }
+                .img{
+                    padding-top:40px;
+                    padding-left:50px;
+                }
+                .pro_image{
+                    width:400px;
+                    height:400px;
+                    border-radius:20px;
+                    
+                }
+                .heading{
+                    text-align:center;
+                    font-weight:100px;
+                    font-size:40px;
+                    font-family: 'Bacasime Antique', serif;
+                    padding-top:30px;
+                }
+                .product p{
+                    padding:10px;
+                    font-size:30px;
+                    text-transform:uppercase;
+                }
+                .product .btn{
+                    margin-left:10px;
+                    padding: 4px 3px 4px 2px;
+                    background-color:#ADD8E6;
+                
+                }
+                .product .btn:hover{
+                    z-index: 2;
+                    border:1px solid #f2aa93;
+                    transition:1s;
+                }
+
+            </style>
+    </head>
+    
+    
+    <body>
+        <%-include('partials/header')%>
+        <h2><%= catalogData[0].productName %></h2>
+        
+        <section class="product_info">
+            <%if (action==='add'){%>
+
+<%}else{%>
+    <%if(catalogData.length>0){%>
+        <%catalogData.forEach(function(data){%>
+            <div class="img">
+                <a class='pro_image'>
+                    <img src="data:image;base64,<%= data['productImage'].toString('base64') %>">
+                </a>
+            </div>
+            <div class="product">
+                <p class="pro_name"><%= data['productName']%></p>
+                <p class="category">CATEGORY: <%= data['Category']%></p>
+                <p class="pro_price"><%= data['Price']%></p>
+            </div>
+            </div>
+        <%});%>
+    <%}%>
+<%}else{%>
+    <script>
+        alert('Sorry, No items available');
+    </script>
+<%}%>
+        </section>
+    </body>
+</html>
+<div class="img">
+              

@@ -7,34 +7,74 @@ router.get('/',(req,res)=>{
     var query = "SELECT * FROM products";
     db.query(query, function (error, data) {
         if (error) {
-            console.error(error);
+            throw error;
         } else {
-            res.render('CATALOG', { title: 'RAE CATALOG', action: 'list', Catalog: data });
+            res.render('Catalog', { title: 'RAE CATALOG', action: 'list', catalogData: data });
         }
     });
     
 })
+router.get('/:productName',(req,res)=>{
+    var query="SELECT * FROM products WHERE productName=?";
+    db.query(query,function(error){
+        if(error){
+            throw error;
 
+        }else{
+            res.render('catalogByName', { title: 'RAE CATALOG', action: 'list', catalogData: data });
+        }
+    });
+
+})
 router.get('/Bottomwear',(req,res)=>{
   
-    res.send('bottomwear');
+   var query="SELECT * FROM products WHERE Category='Bottom-Wear'";
+   db.query=(query,function(error,data){
+    if(error){
+        throw error;
+    }else{
+        res.render('bottomwear',{title:'BOTTOM-WEAR',action:'list',catalogData:data});
+    }
+   });
     
 })
 
 router.get('/Tops',(req,res)=>{
   
-    res.send('SHIRTS/SWEATERS');
+    
+    var query="SELECT * FROM products WHERE Category='Tops'";
+    db.query=(query,function(error,data){
+     if(error){
+         throw error;
+     }else{
+         res.render('tops',{title:'TOPS',action:'list',catalogData:data});
+     }
+    });
     
 })
 
 router.get('/Dresses',(req,res)=>{
   
-    res.send('dresses');
+ 
+    var query="SELECT * FROM products WHERE Category='Dresses'";
+    db.query=(query,function(error,data){
+     if(error){
+         throw error;
+     }else{
+         res.render('dresses',{title:'DRESSES',action:'list',catalogData:data});
+     }
+    });
     
 })
 router.get('/Bags',(req,res)=>{
-  
-    res.send('totes/Backpacks/Purses');
-    
+   
+    var query="SELECT * FROM products WHERE Category='Bags'";
+    db.query=(query,function(error,data){
+     if(error){
+         throw error;
+     }else{
+         res.render('bags',{title:'BAGS',action:'list',catalogData:data});
+     }
+    });
 })
 module.exports=router;

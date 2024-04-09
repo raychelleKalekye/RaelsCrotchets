@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SHOPPING CART</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Instrument+Serif:ital@0;1&family=Playfair+Display&display=swap" rel="stylesheet">
+        <style>
+            .cartTab{
+                width:350px;
+                background-color:#d6a57a ;
+                color:#eee;
+                position:fixed;
+                inset: 0 0 0 auto;
+                display:grid;
+                grid-template-rows:70px 2fr 80px;
+            
+            }
+            .cartTab h1{
+                padding:20px;
+                margin:0;
+
+                font-weight:300;
+            }
+            .listCart button{
+                font-family:Poppins;
+                border:none;
+                font-size: large;
+                
+                margin-top:100%;
+                margin-left:15px;
+                margin-right:5px;
+                
+                background-color:#f2d699 ;
+                grid-template-columns:repeat(2,1fr);
+            }
+            .listCart button:hover{
+                transition: 2s;
+                z-index: 2;
+                background-color:#bd6597;
+            }
+            .listCart .close{
+                background-color: #baa2a2;
+            }
+            .listCart .item img{
+                width:100%;
+
+            }
+            .listCart .item{
+                display:grid;
+                grid-template-columns:70px 150px 50px 1fr ;
+                gap:10px;
+                text-align:center;
+                align-items:center;
+            }
+            .listCart .quantity span{
+                display:inline-block;
+                width:25px;
+                height:25px;
+                background-color: #baa2a2;
+                color: #555;
+                border-radius:50%;
+                cursor:pointer;
+                
+            }
+            .listCart .quantity span:nth-child(2){
+                background-color:transparent;
+                color:#eee;
+
+            }
+            .listCart .item:nth-child(even){
+                background-color: #eee1;
+            }
+            .listCart{
+                overflow:auto;
+            }
+            .listCart::-webkit-scrollbar{
+                width:0;
+            
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="cartTab">
+            <h2>Shopping Cart</h2>
+            <div class="listCart">
+                <div class="item">
+                    <div class="img">
+
+                    </div>
+                    <div class="price">
+
+                    </div>
+                    <div class="quantity">
+                        <span class="minus">&lt</span>
+                        <span>1</span>
+                        <span class="plus">&gt</span>
+                    </div>
+
+                </div>
+                <button class="close">CLOSE </button>
+                <button class="checkOut">CHECKOUT</button>
+            </div>
+        </div>
+    </body>
+</html>
