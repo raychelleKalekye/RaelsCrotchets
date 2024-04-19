@@ -21,5 +21,18 @@ app.post('/Signup',(req,res)=>{
         alert("Passwords do not match.Try again!")
 
     }
+    var query=`INSERT INTO users(fname,sname,us_name,phoneNo,
+        email,Password)VALUES(?,?,?,?,?,?))`;
+    db.query(QUERY,[fname,sname,usname,phoneNo,email,Password],(req,res)=>{
+        if(error){
+            console.error("Error adding user:",error);
+        }else{
+            alert("HAPPY SHOPPING " + usname +"!");
+            res.redirect('/Catalog');
+        }
+    });
 
+})
+app.get('/details',(req,res)=>{
+  const
 })
