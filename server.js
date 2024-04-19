@@ -12,4 +12,8 @@ app.get('/',(req,res)=>{
 })
 const catalogRouter=require('./routes/Catalog');
 app.use('/Catalog',catalogRouter)
+const indexRouter=require('./routes/index')
+app.use('/RaePatterns',indexRouter)
+const usersRouter=require('./routes/Users');
+app.use('/Users',usersRouter);
 app.listen(3000)

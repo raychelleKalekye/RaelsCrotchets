@@ -1,0 +1,25 @@
+const express=require('express');
+const db=require('../database');
+const router=expressRouter();
+
+app.get('/Signup',(req,res)=>{
+    res.render('Signup',{title:'SIGN UP',action:'add'});
+})
+app.post('/Signup',(req,res)=>{
+    var fname=req.body.fname;
+    var sname=req.body.sname;
+    var usname=req.body.us_name;
+    var phoneNo= req.body.phoneNo;
+    var email=req.body.Email;
+    var password=req.body.Password;
+    var sePassword=req.body.Confirm_password;
+
+    if(length(password)<8){
+        alert("Passowrd must be atleast 8 characaters")
+    }
+    if(password!==sePassword){
+        alert("Passwords do not match.Try again!")
+
+    }
+
+})

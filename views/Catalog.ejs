@@ -71,6 +71,24 @@
                     border:1px solid #f2aa93;
                     transition:1s;
                 }
+                .form1{
+                padding-top:2%;
+               
+                padding-left:2%;
+                height:100vh;
+                width:100%;
+                    }
+                .form1 div{
+                    padding-top:3%;
+                }
+                .form1 h2{
+                    text-align:center;
+                
+                }
+                .form1 label{
+                    font-size: large;
+                
+                }
             </style>
         </head>
         <body>
@@ -79,7 +97,47 @@
                 <%- include ('partials/header') %>
                 <h2 class="heading"><%= title %></h2>
                 <% if (action === 'add') { %>
-                
+                    <form class="form1"  action="/Catalog/newItem" enctype="multipart/form-data" method="POST">
+                        <h2>INSERT NEW PRODUCT</h2>
+                        <div>
+                            <label for="productId">Product Id:</label>
+                            <input type="text" id="productId" name="productId">
+                        </div>
+                        
+                        <div>
+                            <label for="productName">Name Of Product:</label>
+                            <input type="text" id="productName" name="productName">
+                        </div>
+                        <div>
+                            <label for="Category">Category:</label>
+                            <input type="radio" id="sweaters" name="Category" value="Sweaters">
+                            <label for="dresses">Dresses</label>
+            
+                            <input type="radio" id="tops" name="Category" value="Tops">
+                            <label for="tops">Tops</label>
+            
+                            <input type="radio" id="bottomWear" name="Category" value="Bottom-Wear">
+                            <label for="bottomWear">Bottom-Wear</label>
+            
+                            <input type="radio" id="bags" name="Category" value="Bags">
+                            <label for="bags">Bags</label>
+                            
+                        </div>
+                       
+                        <div>
+                            <label for="Price">Price:</label>
+                            <input type="text" id="Price" name="Price">
+                        
+                        </div>
+                        <div> 
+                            <label for="productImage">Product's Image:</label>
+                            <input type="file" id="productImage" name="productImage">
+                        </div>
+                        <div>
+                            <button>SUBMIT</button>
+                        </div>
+                        
+                    </form>
                 <% } else { %>
                     <% if (catalogData.length > 0) { %>
                         <% catalogData.forEach(function(data) { %>
