@@ -1,11 +1,11 @@
-const express=require('express');
-const db=require('../database');
-const router=expressRouter();
+const express=require('express')
+const db=require('../database')
+const router = express.Router()
 
-app.get('/Signup',(req,res)=>{
+router.get('/Signup',(req,res)=>{
     res.render('Signup',{title:'SIGN UP',action:'add'});
 })
-app.post('/Signup',(req,res)=>{
+router.post('/Signup',(req,res)=>{
     var fname=req.body.fname;
     var sname=req.body.sname;
     var usname=req.body.us_name;
@@ -33,6 +33,4 @@ app.post('/Signup',(req,res)=>{
     });
 
 })
-app.get('/details',(req,res)=>{
-  const
-})
+module.exports=router;

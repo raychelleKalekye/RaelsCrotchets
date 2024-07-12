@@ -1,8 +1,6 @@
 const express=require('express');
 const db=require('../database');
 const router=express.Router();
-const multer=require('multer');
-const upload=multer({dest:'../products/product_images'});
 
 
 router.get('/',(req,res)=>{

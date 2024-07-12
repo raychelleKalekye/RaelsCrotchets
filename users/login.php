@@ -15,7 +15,7 @@ $invalid = false;
                         session_regenerate_id();
                         $_SESSION["user_id"] = $user["phoneNo"];
                         header('Location: index.php');
-                        exit(); // Add exit to stop script execution after redirection
+                        exit(); 
                     } else {
                         $invalid = true;
                     }
